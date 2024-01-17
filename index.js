@@ -145,10 +145,15 @@ allBtn.addEventListener("click", showAllGames);
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
+const unfundedGames = GAMES_JSON.filter((game) => game.pledged < game.goal);
 
 // create a string that explains the number of unfunded games using the ternary operator
+const unfundedString = `Currently, we have ${unfundedGames.length} games remain unfunded. We need your help fund these amazing games.`;
 
 // create a new DOM element containing the template string and append it to the description container
+const unfundedStringElem = document.createElement("span");
+unfundedStringElem.textContent = unfundedString;
+descriptionContainer.append(unfundedStringElem);
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
@@ -163,10 +168,15 @@ const sortedGames = GAMES_JSON.sort((item1, item2) => {
 });
 
 // TODO use destructuring and the spread operator to grab the first and second games
-const { name } = sortedGames[0];
+const [game1, game2] = sortedGames;
+const gameOneCont = document.createElement("span");
+const gametwoCont = document.createElement("span");
+
+gameOneCont.textContent = game1.name;
+gametwoCont.textContent = game2.name;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
-const topPledge = name;
-firstGameContainer.append(topPledge);
+firstGameContainer.append(gameOneCont);
 
 // TODO do the same for the runner up item
+secondGameContainer.append(gametwoCont);
