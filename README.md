@@ -22,8 +22,10 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
+https://imgur.com/a/ID37LDg
 
-<img src='https://imgur.com/a/ID37LDg' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![web102_prework](https://github.com/vazquezea96/web102_prework/assets/80133388/bf25d08c-d0b0-46cc-bee9-00ea9dd0cd5a)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with 
